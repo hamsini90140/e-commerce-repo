@@ -1,4 +1,7 @@
 # e-commerce-repo
+name- INDHU HAMSINI , N26V01A0148 , SECTION 2 
+
+DEPLOY LINK- https://vocal-zuccutto-c8abd9.netlify.app
 # 🛍️ E-Commerce Website
 
 ## 📌 Project Overview
