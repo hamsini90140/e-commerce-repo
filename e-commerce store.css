@@ -1,0 +1,310 @@
+:root {
+    --bg: #F6F2FB;
+    --surface: #FFFFFF;
+    --ink: #2A1F3D;
+    --mute: #6B6080;
+    --lav: #E3DAF3;
+    --blush: #F8D9DC;
+    --sage: #D3E3D0;
+    --butter: #F6E7A8;
+    --accent: #5B3FA0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    font: inherit;
+}
+
+/* Navigation */
+
+.promo {
+    background: var(--ink);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+header {
+    background: var(--bg);
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.wrap {
+    max-width: 1180px;
+    margin: auto;
+    padding: 20px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 30px;
+    font-family: Georgia, serif;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    margin-left: auto;
+}
+
+nav a {
+    color: var(--mute);
+}
+
+.cartbtn {
+    background: var(--ink);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+
+/* Hero Section */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: 65px;
+    line-height: 1.1;
+}
+
+.hero p {
+    color: var(--mute);
+    font-size: 18px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 13px 25px;
+    border: none;
+    border-radius: 30px;
+    margin-top: 15px;
+}
+
+.ghost {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--ink);
+}
+
+/* Categories */
+
+.sec {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+h2 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+}
+
+.cats {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.cat {
+    background: var(--lav);
+    border: none;
+    border-radius: 20px;
+    padding: 25px;
+    min-height: 180px;
+}
+
+/* Products */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.thumb {
+    background: var(--blush);
+    height: 200px;
+    border-radius: 15px;
+}
+
+.card h3 {
+    font-size: 17px;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.add {
+    background: transparent;
+    border: 1px solid var(--ink);
+    border-radius: 20px;
+    padding: 8px 18px;
+}
+
+/* Offers */
+
+.offers {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 20px;
+}
+
+.offer {
+    background: var(--butter);
+    border-radius: 25px;
+    padding: 35px;
+    min-height: 250px;
+}
+
+.code {
+    border: 2px dashed var(--ink);
+    padding: 10px;
+}
+
+/* Reviews */
+
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.rev {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.stars {
+    color: var(--accent);
+}
+
+/* Benefits */
+
+.perks {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 25px 0;
+}
+
+.perks b {
+    display: block;
+}
+
+.perks span {
+    color: var(--mute);
+}
+
+/* Newsletter */
+
+.news {
+    background: var(--lav);
+    border-radius: 30px;
+    padding: 50px;
+    text-align: center;
+}
+
+.news input {
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: var(--mute);
+}
+
+/* Responsive Design */
+
+@media (max-width: 960px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .cats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .offers,
+    .reviews {
+        grid-template-columns: 1fr;
+    }
+
+    .perks {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .wrap {
+        padding: 15px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .grid {
+        gap: 12px;
+    }
+
+    .news {
+        padding: 25px;
+    }
+}
